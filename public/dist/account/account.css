@@ -1,0 +1,183 @@
+.main{
+    margin-top: 2px;
+}
+.headerCategory{
+    box-shadow: 0px 2px 6px rgb(0 0 0 / 8%);
+    background: #fff;
+    margin-bottom: 20px;
+    position: relative;
+}
+.breadcrumb{
+    margin-bottom: 0px;
+    padding: 9px 0;
+    background: none;
+    display: flex;
+    width: max-content;
+}
+.breadcrumb a {
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 12px;
+    font-weight: normal;
+}
+.breadcrumb a span {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs_sepa{
+    background: url(../../assets/images/right_arrow.png) no-repeat scroll left center;
+    float: left;
+    margin: 0 5px;
+    padding: 4px;
+    width: 10px;
+}
+
+.menu-left{
+    width: 253px;
+    height: 78vh;
+    background-color: #f6fbfc;
+    padding: 30px 10px 10px 10px;
+
+}
+.menu-item{
+    cursor: pointer;
+    margin-bottom: 20px;
+    padding: 0.5px 10px;
+}
+.content{
+    background: white;
+    width: calc(100% - 270px);
+    height: 100%;
+    margin-bottom: 50px;
+}
+.card-edit{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 30px;
+}
+.avatar-account{
+    width: 80px;
+    height: 80px;
+}
+.title-account{
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+.item-form{
+    width: 600px;
+    margin-top: 15px;
+}
+.btn-form-submit{
+    width: 600px;
+    cursor: pointer;
+    display: block;
+    background: #fd2424;
+    border: 0.5px solid hsla(0,0%,46.7%,.5);
+    box-shadow: 0 4px 4px rgba(255,0,0,.2);
+    border-radius: 25px;
+    text-align: center;
+    color: #fff;
+    padding: 11px 0;
+    margin: 40px 0;
+}
+.card_support{
+    width: 700px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.card_support_item{
+    width: calc(50% - 25px);
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+    background: #fff;
+    border: 0.5px solid #bababa;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+.title-support{
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+.phone-hotline{
+    margin-bottom: 0px;
+    margin-top: 3px;
+    color: #fd2424;
+    font-size: 13px;
+}
+.fa-solid, .fa-regular{
+    font-size: 20px;
+    margin-right: 10px;
+}
+@media (max-width: 1400px) {
+    .main {
+        margin-top: 17px;
+    }
+}
+@media (max-width: 1200px) {
+    .card_support{
+        width: 600px;
+    }
+    .card_support_item{
+        width: calc(50% - 10px);
+    }
+    .title-support{
+        font-size: 13px;
+        font-weight: 500;
+    }
+    .phone-hotline{
+        font-size: 12px;
+    }
+}
+@media (max-width: 992px) {
+    .main {
+        margin-top: 0px;
+    }
+    .menu-left{
+        width: 210px;
+    }
+    .content{
+        width: calc(100% - 230px);
+    }
+    .item-form{
+        width: 90%;
+    }
+    .btn-form-submit{
+        width: 90%;
+    }
+    .card_support{
+        width: 100%;
+        flex-direction: column;
+    }
+    .card_support_item {
+        width: calc(70% - 10px);
+    }
+    .title-support {
+        font-size: 15px;
+    }
+    .phone-hotline {
+        font-size: 13px;
+    }
+}
+@media (max-width: 767px) {
+    .main{
+        margin-top: -2px;
+    }
+    .menu-left {
+        width: 100%;
+        height: 100%;
+    }
+    .content{
+        width: 100%;
+        margin-top: 15px;
+    }
+    .card_support_item {
+        width: 85%;
+    }
+}
