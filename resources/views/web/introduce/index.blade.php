@@ -15,6 +15,7 @@
     </div>
     <div class="container content-introduce">
         {!! $data->content !!}
+
     </div>
 @stop
 @section('script_page')

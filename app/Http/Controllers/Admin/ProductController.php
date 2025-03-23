@@ -99,6 +99,7 @@ class ProductController extends Controller
                 'display' => $display,
             ]);
             $product_infor->save();
+
             $this->add_img_product($request, $product_infor->id);
             $attribute = $request->get('variant');
             $related = $request->get('related');
@@ -107,6 +108,7 @@ class ProductController extends Controller
             return \redirect()->route('admin.products.index')->with(['success' => 'Thêm sản phẩm thành công']);
         } catch (\Exception $exception) {
             DB::rollBack();
+            dd($exception);
             return back()->with(['error' => $exception->getMessage()]);
         }
     }
@@ -115,11 +117,16 @@ class ProductController extends Controller
     {
         if (User::checkUserRole(5)) {
             $product_infor = ProductInformationModel::find($id);
-            unlink($product_infor->image);
+            if (file_exists($product_infor->image)) {
+                unlink($product_infor->image);
+            }
+
             $data_image = ImageVariantModel::where('product_infor_id', $id)->get();
             if ($data_image) {
                 foreach ($data_image as $value) {
-                    unlink($value->image);
+                    if (file_exists($value->image)){
+                        unlink($value->image);
+                    }
                     $value->delete();
                 }
             }

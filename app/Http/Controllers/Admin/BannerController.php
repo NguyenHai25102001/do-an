@@ -125,7 +125,10 @@ class BannerController extends Controller
                 $part = 'upload/banner/img/';
                 $file_name = $part.Str::random(40). '.'. $file->getClientOriginalExtension();
                 $request->file('file')->move($part, $file_name);
-                unlink($banner->image);
+                if(($banner->image)){
+                    unlink($banner->image);
+
+                }
                 $banner->image = $file_name;
             }
             if ($request->get('display') == 'on'){

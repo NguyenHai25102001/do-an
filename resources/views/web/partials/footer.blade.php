@@ -40,6 +40,16 @@
                                 <a href="{{url('gioi-thieu/'.$item->slug)}}">{{$item->title}}</a>
                             </li>
                         @endforeach
+                        <li>Hotline bán hàng:<br/>
+                            <p class="fw-bold">1900.633.909 (Bấm phím 1)</p></li>
+                        <li>Hotline bán hàng:<br/>
+                            <p class="fw-bold">1900.633.909 (Bấm phím 1)</p></li>
+                        <li>Hotline bảo hành, kỹ thuật:<br/>
+                            <p class="fw-bold">1900.633.909 (Bấm phím 2)</p></li>
+                        <li>Hotline hỗ trợ phần mềm:<br/>
+                            <p class="fw-bold">1900.633.909 (Bấm phím 3)</p></li>
+
+
                     </ul>
                 </div>
             </div>
@@ -53,7 +63,11 @@
                                 <a href="{{url('gioi-thieu/'.$item->slug)}}">{{$item->title}}</a>
                             </li>
                         @endforeach
+                        <li>Chính sách bảo hành</li>
+                        <li>Chính sách mua hàng Online</li>
+                        <li>Chính sách bảo mật thông tin khách hàng</li>
                     </ul>
+
                 </div>
             </div>
             <div class="item-menu">
@@ -474,7 +488,7 @@
             </li>
             <li>
                 <a href="{{url('tra-cuu-don-hang')}}" id="modal_support">
-                    <i class="fa-solid fa-truck-fast" style="font-size: unset;margin-right: 0" ></i>
+                    <i class="fa-solid fa-truck-fast" style="font-size: unset;margin-right: 0"></i>
                     <span>Tra cứu đơn</span>
                 </a>
             </li>

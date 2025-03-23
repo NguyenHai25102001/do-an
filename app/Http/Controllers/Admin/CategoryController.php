@@ -57,6 +57,7 @@ class CategoryController extends Controller
                 $file = $request->file('file');
                 $part = 'upload/banner/img/';
                 $file_name = $part.Str::random(40). '.'. $file->getClientOriginalExtension();
+
                 $request->file('file')->move($part, $file_name);
             }
             $category = new CategoryModel();
@@ -113,6 +114,9 @@ class CategoryController extends Controller
                 $part = 'upload/banner/img/';
                 $file_name = $part.Str::random(40). '.'. $file->getClientOriginalExtension();
                 $request->file('file')->move($part, $file_name);
+                if (file_exists($category->image)){
+                    unlink($category->image);
+                }
                 unlink($category->image);
                 $category->image = $file_name;
             }
